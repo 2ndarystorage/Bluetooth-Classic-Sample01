@@ -16,6 +16,7 @@
 		AA000000000000000000AA07 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB07 /* ExternalAccessory.framework */; };
 		AA000000000000000000AA08 /* BLEScanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB10 /* BLEScanManager.swift */; };
 		AA000000000000000000AA09 /* BLEScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB11 /* BLEScanView.swift */; };
+		AA000000000000000000AA10 /* BLEConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB12 /* BLEConnectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AA000000000000000000BB09 /* BluetoothClassicSample01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothClassicSample01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000000000000000000BB10 /* BLEScanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanManager.swift; sourceTree = "<group>"; };
 		AA000000000000000000BB11 /* BLEScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanView.swift; sourceTree = "<group>"; };
+		AA000000000000000000BB12 /* BLEConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				AA000000000000000000BB06 /* AccessoryModel.swift */,
 				AA000000000000000000BB10 /* BLEScanManager.swift */,
 				AA000000000000000000BB11 /* BLEScanView.swift */,
+				AA000000000000000000BB12 /* BLEConnectionView.swift */,
 				AA000000000000000000BB08 /* Info.plist */,
 			);
 			path = BluetoothClassicSample01;
@@ -162,6 +165,7 @@
 				AA000000000000000000AA06 /* AccessoryModel.swift in Sources */,
 				AA000000000000000000AA08 /* BLEScanManager.swift in Sources */,
 				AA000000000000000000AA09 /* BLEScanView.swift in Sources */,
+				AA000000000000000000AA10 /* BLEConnectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,19 +5,17 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            NavigationView {
+            NavigationStack {
                 AccessoryListView()
                     .environmentObject(bluetoothManager)
             }
-            .navigationViewStyle(.stack)
             .tabItem {
                 Label("Classic", systemImage: "cable.connector")
             }
 
-            NavigationView {
+            NavigationStack {
                 BLEScanView()
             }
-            .navigationViewStyle(.stack)
             .tabItem {
                 Label("BLE スキャン", systemImage: "dot.radiowaves.left.and.right")
             }

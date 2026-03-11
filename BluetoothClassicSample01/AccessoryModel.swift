@@ -35,10 +35,10 @@ struct BLEDeviceInfo: Identifiable {
 
     var signalStrength: SignalStrength {
         switch rssi {
-        case -50...:        return .excellent
-        case -70 ..< -50:   return .good
-        case -90 ..< -70:   return .fair
-        default:            return .poor
+        case -50...Int.max:        return .excellent
+        case -70 ... -51:          return .good
+        case -90 ... -71:          return .fair
+        default:                   return .poor
         }
     }
 
@@ -51,6 +51,44 @@ struct BLEDeviceInfo: Identifiable {
             case .fair:      return "弱"
             case .poor:      return "非常に弱"
             }
+        }
+    }
+}
+
+// MARK: - BLE Connection State
+
+enum BLEConnectionState: Equatable {
+    case disconnected
+    case connecting
+    case connected
+    case disconnecting
+    case failed(String)
+
+    static func == (lhs: BLEConnectionState, rhs: BLEConnectionState) -> Bool {
+        switch (lhs, rhs) {
+        case (.disconnected, .disconnected),
+             (.connecting, .connecting),
+             (.connected, .connected),
+             (.disconnecting, .disconnecting): return true
+        case (.failed(let a), .failed(let b)): return a == b
+        default: return false
+        }
+    }
+
+    var label: String {
+        switch self {
+        case .disconnected:       return "未接続"
+        case .connecting:         return "接続中..."
+        case .connected:          return "接続済み"
+        case .disconnecting:      return "切断中..."
+        case .failed(let msg):    return "失敗: \(msg)"
+        }
+    }
+
+    var isInProgress: Bool {
+        switch self {
+        case .connecting, .disconnecting: return true
+        default: return false
         }
     }
 }
