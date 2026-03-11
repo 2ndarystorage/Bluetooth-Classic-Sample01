@@ -14,6 +14,8 @@
 		AA000000000000000000AA05 /* CommunicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB05 /* CommunicationView.swift */; };
 		AA000000000000000000AA06 /* AccessoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB06 /* AccessoryModel.swift */; };
 		AA000000000000000000AA07 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB07 /* ExternalAccessory.framework */; };
+		AA000000000000000000AA08 /* BLEScanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB10 /* BLEScanManager.swift */; };
+		AA000000000000000000AA09 /* BLEScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000BB11 /* BLEScanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		AA000000000000000000BB07 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		AA000000000000000000BB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA000000000000000000BB09 /* BluetoothClassicSample01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothClassicSample01.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000000000000000000BB10 /* BLEScanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanManager.swift; sourceTree = "<group>"; };
+		AA000000000000000000BB11 /* BLEScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +44,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA000000000000000000DD01 /* / */ = {
+		AA000000000000000000DD01 = {
 			isa = PBXGroup;
 			children = (
 				AA000000000000000000DD02 /* BluetoothClassicSample01 */,
@@ -58,6 +62,8 @@
 				AA000000000000000000BB04 /* AccessoryListView.swift */,
 				AA000000000000000000BB05 /* CommunicationView.swift */,
 				AA000000000000000000BB06 /* AccessoryModel.swift */,
+				AA000000000000000000BB10 /* BLEScanManager.swift */,
+				AA000000000000000000BB11 /* BLEScanView.swift */,
 				AA000000000000000000BB08 /* Info.plist */,
 			);
 			path = BluetoothClassicSample01;
@@ -154,6 +160,8 @@
 				AA000000000000000000AA04 /* AccessoryListView.swift in Sources */,
 				AA000000000000000000AA05 /* CommunicationView.swift in Sources */,
 				AA000000000000000000AA06 /* AccessoryModel.swift in Sources */,
+				AA000000000000000000AA08 /* BLEScanManager.swift in Sources */,
+				AA000000000000000000AA09 /* BLEScanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BM625ZWVS9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BluetoothClassicSample01/Info.plist;
@@ -304,6 +313,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BM625ZWVS9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = BluetoothClassicSample01/Info.plist;
@@ -342,7 +352,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = AA000000000000000000GG01 /* Project object */;
 }

@@ -1,5 +1,6 @@
 import Foundation
 import ExternalAccessory
+import CoreBluetooth
 
 struct AccessoryInfo: Identifiable {
     let id: UUID = UUID()
@@ -15,6 +16,46 @@ struct AccessoryInfo: Identifiable {
     var connectionID: Int { accessory.connectionID }
     var isConnected: Bool { accessory.isConnected }
 }
+
+// MARK: - BLE Device Model
+
+struct BLEDeviceInfo: Identifiable {
+    let id = UUID()
+    let peripheral: CBPeripheral
+    var rssi: Int
+    var advertisementData: [String: Any]
+
+    var uuid: UUID { peripheral.identifier }
+    var name: String { peripheral.name ?? "名称不明" }
+    var localName: String? { advertisementData[CBAdvertisementDataLocalNameKey] as? String }
+    var displayName: String { localName ?? name }
+    var isConnectable: Bool { (advertisementData[CBAdvertisementDataIsConnectable] as? Bool) ?? false }
+    var serviceUUIDs: [CBUUID] { (advertisementData[CBAdvertisementDataServiceUUIDsKey] as? [CBUUID]) ?? [] }
+    var rssiText: String { "\(rssi) dBm" }
+
+    var signalStrength: SignalStrength {
+        switch rssi {
+        case -50...:        return .excellent
+        case -70 ..< -50:   return .good
+        case -90 ..< -70:   return .fair
+        default:            return .poor
+        }
+    }
+
+    enum SignalStrength {
+        case excellent, good, fair, poor
+        var label: String {
+            switch self {
+            case .excellent: return "強"
+            case .good:      return "普通"
+            case .fair:      return "弱"
+            case .poor:      return "非常に弱"
+            }
+        }
+    }
+}
+
+// MARK: - Message Model
 
 struct Message: Identifiable {
     let id: UUID = UUID()
