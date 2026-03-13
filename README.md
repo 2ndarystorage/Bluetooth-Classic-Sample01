@@ -26,3 +26,16 @@
 
 ## Completion Status
 - Partial: sample-level implementation with basic scan/connect and Classic stream I/O; limited error handling and no production hardening/tests.
+
+## Program Summary
+- iOS SwiftUI sample app with two tabs: Bluetooth Classic (ExternalAccessory/MFi) and BLE scanning/connection via CoreBluetooth.
+- Classic flow: list connected accessories, pick protocol, open `EASession`, send/receive stream messages.
+- BLE flow: scan, show RSSI/connectable state, connect/disconnect, and list discovered services/characteristics.
+
+## How to Use
+- Open `BluetoothClassicSample01.xcodeproj` in Xcode and run on a physical iOS device (Bluetooth/ExternalAccessory are device-only). Not verified.
+- Classic: add your accessory protocol to `BluetoothClassicSample01/Info.plist` under `UISupportedExternalAccessoryProtocols`, connect an MFi accessory, select it, then open the session and send messages.
+- BLE: open the BLE tab, start scanning, connect to a device, and view services/characteristics.
+
+## Completion Status
+- Partial: sample-level implementation with basic Classic session I/O and BLE scan/connect/discovery; minimal error handling and no tests or production hardening noted.
